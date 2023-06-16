@@ -3,6 +3,7 @@ from tkinter import *
 from tkinter import ttk
 
 
+#function that gives me string full of random numbers
 def random_Numbers(len,min,max):
     numbers = ""
     for i in range(int(len)):
@@ -12,7 +13,7 @@ def random_Numbers(len,min,max):
             numbers = numbers + str(random.randint(int(min),int(max))) + ", "
     return numbers
 
-
+#functions that present the random number or random numbers on the gui
 def random_Number():
 
     min = float(min1.get())
@@ -82,7 +83,7 @@ max2_entry = ttk.Entry(bottomframe, textvariable=max2)
 ttk.Label(bottomframe, text="minimum number").grid(column=2, row=1)
 max2_entry.grid(column=3, row=1)
 
-#field to put the min input for multiple random numbers
+#field to put the amount of random random numbers
 length = StringVar()
 len_entry = ttk.Entry(bottomframe, textvariable=length)
 ttk.Label(bottomframe, text="How many numbers").grid(column=4, row=1)
